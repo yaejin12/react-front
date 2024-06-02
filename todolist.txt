@@ -1,0 +1,69 @@
+주소에 전달된 데이터를 받을 수 있는 방법 - url parameter(매개변수)
+
+1.useSearchParams (query-string)
+  jin.com/product?goods=23241223
+
+  const[searchParams. setSearchParams] = useSearchParams()
+  searchParams.get("goods") // 23241223
+
+2.useParams (url-parameter)
+  jin.com/product/23241223
+  
+  path: /todo/:todoId
+  element:<TodoPage/>
+
+  TodoPage.js
+  >>> const {todoId} = useParams() //23241223
+
+
+-----------------------
+
+1.데이터를 주소를 통해 전달할 수 있다.
+2.react-router-dom은 단순하게 URL은 맵핑해주는 역할만 하는 것이 아니라
+주소를 다루는 다양한 함수를 지원
+
+-----------------------
+
+번들(bundle)
+  -> 너저분하게 분리된 리소스들을 특정 기준으로 분리하여
+  사용자에게 화면이 보여지는 시간을 감소하는 작업
+
+  트리쉐이킹
+  : 사용하지 않는 불필요하는 코드는 제거하여 필요한 코드들만 사용
+  => bundle.js => 번들링 된 결과물
+
+-----------------------
+
+react style sheet
+
+1. css-in-js
+  js파일에 css문법 작성이 가능한 스타일링 방법
+  ex) styled-components, emotion, styleX
+
+  현재는 실무에서 가장 많이 사용되는 방법
+
+  2.pure css / scss + (post css)
+  일반적인 css,class구분이 어려웠음 하지만 post css를 사용하면
+  app.module.css를 통해서 해당 컴포넌트에서만 사용할 수 있는 css를 import
+
+  3.tailwind css , panda-css
+  가장 최근 스택에서는 자주 사용되는 스타일 시트
+  <div class="w300 h200">...</div>
+
+-----------------------
+
+styled-components 
+  스타일된 컴포넌트를 생성해서 요소 대신 생성된 컴포넌트를 활용하는 방법
+
+  const Wrapper = styled.div
+  css 문법
+  <Wrapper>
+    <div>
+    ...
+  </Wrapper>
+
+  npm i styled-components
+  -----------------------
+
+
+
