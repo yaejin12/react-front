@@ -13,6 +13,12 @@ const mockProducts = [
     name: "상품-2",
     price: 2000,
   },
+  {
+    id: 13,
+    category: "random",
+    name: "상품-2",
+    price: 5000,
+  },
 ];
 
 // 컴포넌트 함수명의 시작은 무조건 대문자
@@ -37,7 +43,7 @@ function Main() {
         // {}는 추가 연산 가능
         // return 생략인 ()는 코드블럭이 없기 때문에 연산 x
 
-                /* react에서 map이후에는 각 요소에 key라는 속성을 부여해야 한다
+        /* react에서 map이후에는 각 요소에 key라는 속성을 부여해야 한다
                 "랜더트리가 구분할 수 있는 특정한 고유 값을 부여"
                  return <Link to={`/todo/${product.id}?goods=${product.category}`} key={product.id}>
                  */
