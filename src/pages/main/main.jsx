@@ -19,7 +19,7 @@ import SignUpForm from "./_components/sign-up-form";
 const Main = () => {
   //컴포넌트 -> 레이아웃, 회원가입폼, 로그인폼,인풋,버튼
 
-  let formState = "SIGN-IN";
+  let formState = "SIGN-UP";
   //let isFormSignIn = true
 
   const TAB_ARRAY = [{ name: "SIGN-IN" }, { name: "SIGN-UP" }];
