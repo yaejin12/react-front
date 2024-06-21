@@ -1,8 +1,9 @@
 import styled, { css } from "styled-components";
 import FormInput from "../../../components/FormInput";
 import TDButton from "../../../components/Button";
+import { Form } from "./style";
 
-const SignInForm = () => {
+const SignInForm = ({}) => {
   return (
     <S.Form>
       <FormInput label={"이메일"} placeholder={"email"} size={2}></FormInput>
@@ -23,15 +24,6 @@ const SignInForm = () => {
   );
 };
 export default SignInForm;
-
-const Form = styled.form`
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 32px;
-`;
 
 const InputBox = styled.div`
   display: flex;

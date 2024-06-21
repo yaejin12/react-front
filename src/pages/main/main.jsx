@@ -53,6 +53,15 @@ export default Main;
 
 //컴포넌트 앞글자는 대문자로 만들어야한다
 // 스타일 된 요소를 생성해서 컴포넌트화한다 ===
+const Form = styled.form`
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+`;
+
 const Wrapper = styled.div`
   height: calc(100vh - 140px);
   display: flex;
@@ -63,16 +72,19 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
   width: 360px;
+
   border: 1px solid #999;
 `;
 
 const Header = styled.header`
   background-color: #7df8dc;
   display: flex;
+  height: 70px;
 `;
 
 const Tab = styled.div`
   width: 50%;
+
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -97,6 +109,7 @@ const Tab = styled.div`
  */
 
 const S = {
+  Form,
   // 키와 value가 같으면 Wrapper : Wrapper value 생략 가능
   Wrapper,
   Container,
