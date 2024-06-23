@@ -31,16 +31,27 @@ form.option ? placeholder : form.name
 form.option ?. placeholder ?? form.name
 option이 있다면 placeholder 반환하고 없으면 form.name 반환해라
 
+SIGNFORM_ARRAY?.map((form) => {}
+빈 배열이면 에러가 뜸.! 이때 ?. 를 써야한다
+
 */
 
-const signUpForm = () => {
+const signUpForm = ({ formState }) => {
+  const onSubmitSignUp = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    alert(`${email}님 환영합니다`);
+    formState = "SIGN-UP";
+  };
+
   //로그인 폼에서 로그인 클릭시 /todo 로 이동
   return (
-    <S.Form>
+    <S.Form onSubmit={onSubmitSignUp}>
       {SIGNFORM_ARRAY.map((form) => {
         return (
           <FormInput
             key={form.name}
+            name={form.name}
             size={form.size}
             label={form.label}
             placeholder={form.option ? form.option.placeholder : form.name}

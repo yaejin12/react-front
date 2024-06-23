@@ -44,7 +44,7 @@ const Main = () => {
             </S.Tab>
           ))}
         </S.Header>
-        {formState === "SIGN-IN" ? <SignInForm /> : <SignUpForm />}
+        {formState === "SIGN-IN" ? <SignInForm /> : <SignUpForm formState={formState}/> }
       </S.Container>
     </S.Wrapper>
   );
