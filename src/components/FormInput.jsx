@@ -23,21 +23,21 @@
     -> 자바스크립트에서 데이터의 집단을 나타내는 대표적인 자료구조인 배열과 객체를
     -> 구조를 분해하여 각각의 요소를 변수로 표현하는 과정을 축약
 
-    const seongyong = {
+    const yejin = {
         age: 20,
         height: 190
     }
 
-        const age = seongyong.age
-        const height = seongyong.height
+        const age = yejin.age
+        const height = yejin.height
 
-        const { age : seongyongAge, height } = seongyong
+        const { age : yejinAge, height } = yejin
         객체의 key에 맞는 할당이 이루어져야합니다.
 
         console.log(age, height) // 20, 190
 
-    const seongyong = [20, 190]
-    const [age, height] = seongyong
+    const yejin = [20, 190]
+    const [age, height] = yejin
 
     => 구조 분해를 할당하는 가장 큰 이유는
        
