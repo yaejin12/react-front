@@ -9,11 +9,12 @@ function CheckBox() {
     // e.target.checked : 체크 유무를 true & false 로 알려준다
     console.log(e.target.checked);
 
-    //배열에 값을 추가하는 메서드
-    // push, concat : push 는 배열을 추가만 해주고 concat은 새로운 메서드로 반환하기 때문에 concat만 상태 변경된다.
+    //배열에 값을 추가하는 메서드 push, concat : 
+    // push 는 배열을 추가만 해주고 concat은 새로운 메서드로 반환하기 때문에 concat만 상태 변경된다.
 
     if (e.target.checked) {
-      setMessage(message.concat(value));
+      // setMessage(message.concat(value));
+      setMessage([...message, value]);
       console.log(`message : ${message}`);
     } else {
       //filter
