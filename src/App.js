@@ -6,7 +6,7 @@ import { theme } from "./libs/styles/theme";
 import TodoProvider from "./store/todo.store";
 import Check from "./1_react_basic/ref/Check";
 import CheckBox from "./1_react_basic/ref/export/CheckBox";
-import FoodContainer from "./1_react_basic/ref/export/FoodContainer";
+import ProductContainer from "./1_react_basic/class/function/memoization/ProductContainer";
 
 function App() {
   return (
@@ -16,8 +16,8 @@ function App() {
     //     <RouterProvider router={router} />
     //   </TodoProvider>
     // </ThemeProvider>
-    <FoodContainer />
     // 컴포넌트
+    <ProductContainer /> //memoization 설명
   );
 }
 export default App;
