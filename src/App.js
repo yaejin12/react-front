@@ -7,6 +7,8 @@ import TodoProvider from "./store/todo.store";
 import Check from "./1_react_basic/ref/Check";
 import CheckBox from "./1_react_basic/ref/export/CheckBox";
 import ProductContainer from "./1_react_basic/class/function/memoization/ProductContainer";
+import ParentContainer from "./1_react_basic/context/basic/ParentContainer";
+import { FontSizeProvider } from "./1_react_basic/context/basic/FontContext";
 
 function App() {
   return (
@@ -17,7 +19,10 @@ function App() {
     //   </TodoProvider>
     // </ThemeProvider>
     // 컴포넌트
-    <ProductContainer /> //memoization 설명
+    // <ProductContainer /> //memoization 설명
+    <FontSizeProvider>
+      <ParentContainer />
+    </FontSizeProvider>
   );
 }
 export default App;
