@@ -8,7 +8,8 @@ function ProductContainer() {
   let [amount, setAmount] = useState(1);
   let [coupon, setCoupon] = useState(0);
 
-  // 값은 캐시에 저장되어 있지만, 의존성 배열로 아무것도 전달하지 않았기에 리랜더링 되지 않는다.
+  // 값은 캐시에 저장되어 있지만, 의존성 배열로 아무것도 전달하지 
+  않았기에 리랜더링 되지 않는다.
   // const props = useMemo(() => {
   //   return { amount: amount, coupon: coupon };
   // }, [amount,coupon]);
@@ -25,7 +26,9 @@ function ProductContainer() {
   const props = { amount: amountMemo, coupon: couponMemo };
 
   // useCallback : 메모리를 효과적으로 관리하기위해 사용한다.
-  // 부모에서 자식으로 값을 넘길때 사용하는것이 약간의 공식인데 그렇다고 또 다 감싸는건 아니다.(무조건 감싸는건아니고 회의를 통해 쓸 것이다.)
+  // 부모에서 자식으로 값을 넘길때 사용하는것이 약간의 공식인데 그렇다고 또 다 감싸는건 아니다.
+  // (무조건 감싸는건아니고 회의를 통해 쓸 것이다.)
+
   const onClickToAddAmount = useCallback(() => {
     setAmount(amount + 1);
   }, [amount]);
