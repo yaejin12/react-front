@@ -9,7 +9,7 @@ function ProductContainer() {
   let [coupon, setCoupon] = useState(0);
 
   // 값은 캐시에 저장되어 있지만, 의존성 배열로 아무것도 전달하지 
-  않았기에 리랜더링 되지 않는다.
+  // 않았기에 리랜더링 되지 않는다.
   // const props = useMemo(() => {
   //   return { amount: amount, coupon: coupon };
   // }, [amount,coupon]);
@@ -99,3 +99,4 @@ function ProductContainer() {
 }
 
 export default ProductContainer;
+
